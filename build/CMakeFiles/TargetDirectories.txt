@@ -1,0 +1,3 @@
+C:/Users/lak19/OneDrive/Desktop/STM32notes/build/CMakeFiles/demo.dir
+C:/Users/lak19/OneDrive/Desktop/STM32notes/build/CMakeFiles/edit_cache.dir
+C:/Users/lak19/OneDrive/Desktop/STM32notes/build/CMakeFiles/rebuild_cache.dir

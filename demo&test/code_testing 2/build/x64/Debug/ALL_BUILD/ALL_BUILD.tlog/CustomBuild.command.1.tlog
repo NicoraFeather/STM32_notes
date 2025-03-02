@@ -1,0 +1,10 @@
+^C:\USERS\LAK19\ONEDRIVE\DESKTOP\STM32NOTES\DEMO&TEST\CODE_TESTING 2\SRC\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/lak19/OneDrive/Desktop/STM32notes/demo&test/code_testing 2/src" "-BC:/Users/lak19/OneDrive/Desktop/STM32notes/demo&test/code_testing 2/build" --check-stamp-file "C:/Users/lak19/OneDrive/Desktop/STM32notes/demo&test/code_testing 2/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

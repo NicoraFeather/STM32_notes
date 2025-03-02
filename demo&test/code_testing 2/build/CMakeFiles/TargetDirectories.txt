@@ -1,0 +1,3 @@
+C:/Users/lak19/OneDrive/Desktop/STM32notes/demo&test/code_testing 2/build/CMakeFiles/demo.dir
+C:/Users/lak19/OneDrive/Desktop/STM32notes/demo&test/code_testing 2/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/lak19/OneDrive/Desktop/STM32notes/demo&test/code_testing 2/build/CMakeFiles/ZERO_CHECK.dir
