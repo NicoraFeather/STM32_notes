@@ -108,7 +108,10 @@
 				"mpp",
 				"CPP",
 				"ixx",
-				"cppm"
+				"cppm",
+				"ccm",
+				"cxxm",
+				"c++m"
 			]
 		},
 		{
