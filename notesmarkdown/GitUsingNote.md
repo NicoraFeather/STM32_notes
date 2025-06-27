@@ -24,3 +24,5 @@ git clone <link> 将网上的库下载到本地
 git remote -v 显示相关信息
 git push 上传到默认分支
 git pull 将远程的更改同步到这个设备的本地
+
+## 上述操作可以用插件代替完成
