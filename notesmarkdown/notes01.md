@@ -96,6 +96,35 @@ GCC是GNU开发的编译器集合,支持包括C和C++在内的多种语言。其
 - 舵机
 - 无刷电机
 - 有刷电机
+
+# 0.3 STLink使用指南
+
+- STLink是一个调试器，它的真正功能是Debug
+- 如果你只是想烧录程序，请移步FlyMcu，**设置“RST的低电平复位，DTR高电平进BootLoader”**，然后**连接读秒的时候手动复位**一定不要用STLink，这里可以使用串口强制将HEX文件烧录，不会产生芯片保护、国产芯片不适用、STLink版本号一堆问题，Keil和CubeIDE都有UI来帮助你生成HEX文件，如果是CMake环境，在CMakeLists文件中敲
+  ``` CMake
+    add_custom_command(
+          TARGET ${CMAKE_PROJECT_NAME}
+          POST_BUILD
+          COMMAND ${CMAKE_OBJCOPY} ${CMAKE_PROJECT_NAME}.elf -Oihex ${CMAKE_PROJECT_NAME}.hex
+          COMMENT "Generating hex file for STM32"
+  )
+  ```
+- 如果你真的很想Debug，不想的话，请按照下面的步骤执行
+  1. 购买一个销量比较高的STLink V2调试器，保证质量
+  2. 确保自己的芯片不是盗版的
+  3. 在ST官方下载STM32Programmer的船新版本，不要下载n年以前的各种非官方STlink软件
+  4. 按照提示下载STM32的驱动，然后看设备管理器中确认已经识别到
+  5. 不要连接STM32芯片，进行固件更新
+  6. 重新插拔
+  7. 尝试连接
+  8. 如果连接失败，长按复位的同时点连接，然后松开
+  9. 选择文件烧录
+  10. 如果烧录不正常，选择模式为Under reset；Software reset
+  11. 切换到OB视图，取消勾选“ Read Out Protection”，应用
+  12. 然后断开连接关闭软件，配置Keil/CubeIDE/VSCode/CLion的STLink
+  13. 如果你还是抓狂了的话，真的，Debug没有你想的那么重要，FlyMcu yyds
+  
+
 ## A. GPIO模式
 - VDD 3.3V, VSS 0V
 - 有保护
